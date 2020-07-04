@@ -14,7 +14,8 @@
 }
 
 .navlink {
-  color: #FFFFFF
+  color: #FFFFFF;
+  font-size: 20px;
 }
 
 .navlink:hover {
@@ -23,14 +24,14 @@
 }
 
 .menu {
-  width: 300px;
+  width: 340px;
   float: left;
-  margin-left: 100px;
+  margin-left: 0px;
 }
 
 .menulink {
   display: block;
-  padding: 10px;
+  padding: 17px;
   font-size: 16px;
   text-decoration: none;
   background-color: #4F4A41;
@@ -52,7 +53,7 @@
 }
 
 .siteFooter {
-  margin-top: 20px;
+  margin-top: 90px;
   padding-top: 27px;
   padding-bottom: 15px;
   background-color: #112D32;
@@ -61,4 +62,13 @@
 .footer-paragraph {
   color: #FFFFFF;
   font-size: 14px;
+  margin-left: 12px;
+}
+
+.navbaricon {
+  margin-right: 12px;
+}
+
+.nav-item {
+  margin-right: 33px;
 }
