@@ -24,7 +24,7 @@
 }
 
 .menu {
-  width: 340px;
+  width: 350px;
   float: left;
   margin-left: 0px;
 }
@@ -71,4 +71,12 @@
 
 .nav-item {
   margin-right: 33px;
+}
+
+.home-picture {
+  margin-left: 275px;
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  max-height: 400px;
 }

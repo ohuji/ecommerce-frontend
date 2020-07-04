@@ -9,13 +9,13 @@ const Footer = () => {
             <div className="container-fluid">
                 <div className="row">
 
-                    <div className="offset-3">
+                    <div className="offset-2">
                         <p className="footer-paragraph">
                         Copyright © 2020, Juho Salomäki, All Rights Reserved
                         </p>
                     </div>
 
-                    <div className="offset-2 row">
+                    <div className="offset-3 row">
                         <a href="https://github.com/ohuji">
                             <img src={github}></img>
                         </a>

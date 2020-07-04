@@ -3,6 +3,7 @@ import "./../App.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Menu from "./Menu";
+import etusivuKuva from "./../pictures/etusivuKuva.png";
 
 const Home = () => {
     return (
@@ -11,6 +12,10 @@ const Home = () => {
             <div className="container-fluid">
                 <div className="row">
                     <Menu/>
+
+                    <div>
+                        <img src={etusivuKuva} className="home-picture"></img>
+                    </div>
                 </div>
             </div>
           <Footer/>
