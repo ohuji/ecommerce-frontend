@@ -80,3 +80,41 @@
   max-width: 1000px;
   max-height: 400px;
 }
+
+.product-card {
+  height: 325px;
+  width: 250px;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.product-name {
+  font-size: 20px;
+  margin-bottom: 0px;
+  color: #254E58;
+  font-weight: 500;
+}
+
+.product-name:hover {
+  color: #A4B3B6;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2), 0 15px 35px 0 rgba(0, 0, 0, 0.19);
+  color: #A4B3B6;
+  text-decoration: none;
+}
+
+.product-price {
+  font-size: 30px;
+  color: #00FF00;
+  font-weight: bolder;
+}
+
+.productLink:hover {
+  text-decoration: none;
+  color: #A4B3B6;
+}
+
+
+
