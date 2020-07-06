@@ -116,5 +116,47 @@
   color: #A4B3B6;
 }
 
+.loginCard {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  max-height: 500px;
+  margin-left: 725px;
+  margin-top: 175px;
+}
+
+.form-label {
+  font-size: 15px;
+  margin-right: 325px;
+  font-weight: 700;
+}
+
+.form-button {
+  font-size: 20px;
+  background-color: #112D32;
+  color: #FFFFFF;
+  width: 200px;
+  height: 50px;
+}
+
+.form-button:hover {
+  color: #A4B3B6;
+}
+
+.newUserCard {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  max-height: 75px;
+  margin-left: 725px;
+  margin-top: 30px;
+  margin-bottom: 200px;
+}
+
+.newUserCard-paragraph {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 
 
