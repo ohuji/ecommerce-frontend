@@ -5,6 +5,7 @@ import "./../App.css";
 import { Link } from "react-router-dom";
 import Cookies from "universal-cookie";
 import Axios from "axios";
+import logo1 from "./../pictures/logo1.png"
 
 const cookies = new Cookies();
 
@@ -17,10 +18,13 @@ class Userlogin extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+        const {Username, Password} = this.state;
 
         Axios.post("http://localhost:5000/ecommerce/users", this.state, {withCredentials: true})
         .then(response => {
-                cookies.set("User", response , { path: "/" });     
+                console.log(response)
+                cookies.set("Username", {Username} , { path: "/" });  
+                cookies.set("Password", {Password} , { path: "/" });   
         })
         .catch(error => {
             alert("Kirjautuminen epäonnistui!")
@@ -39,7 +43,8 @@ class Userlogin extends Component {
                 <div className="container-fluid">
                     <div className="card loginCard">
                         <div className="card-body">
-                        <h2 className="card-title">
+                        <img src={logo1}></img>
+                        <h2 className="card-title mt-3">
                             Kirjaudu Sisään
                         </h2>
 
@@ -53,7 +58,8 @@ class Userlogin extends Component {
                                 className="form-control"
                                 name="Username"
                                 value={this.state.Username}
-                                onChange={this.handleChange}>
+                                onChange={this.handleChange}
+                                required>
                               </input>
 
                               <label className="form-label mt-3">
@@ -63,8 +69,10 @@ class Userlogin extends Component {
                               <input 
                                 className="form-control"
                                 name="Password"
+                                type="password"
                                 value={this.state.Password}
-                                onChange={this.handleChange}>
+                                onChange={this.handleChange}
+                                required>
                               </input>
                             </div>
                             

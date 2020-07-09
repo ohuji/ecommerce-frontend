@@ -5,6 +5,8 @@ import Home from "./components/Home";
 import Audioproducts from "./components/Audioproducts";
 import Computerproducts from "./components/Computerproducts";
 import Userlogin from "./components/Userlogin";
+import Userregister from "./components/Userregister";
+import Choosecategory from './components/Choosecategory';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/audio" component={Audioproducts}/>
         <Route path="/computers" component={Computerproducts}/>
         <Route path="/login" component={Userlogin}/>
+        <Route path="/register" component={Userregister}/>
+        <Route path="/category" component={Choosecategory}/>
       </BrowserRouter>
     </div>
   );

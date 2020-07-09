@@ -7,7 +7,6 @@ import phone from "./../icons/mobile-phone-8-16.png";
 import tv from "./../icons/widescreen-tv-16.png";
 import game from "./../icons/joystick-16.png";
 import cpu from "./../icons/cpu-16.png";
-import drink from "./../icons/drink-16.png";
 import camera from "./../icons/camera-5-16.png";
 import music from "./../icons/note-16.png";
 import furniture from "./../icons/sofa-16.png";
@@ -17,7 +16,7 @@ import sport from "./../icons/soccer-16.png";
 
 const Menu = () => {
     return (
-        <div className="menu">
+        <div className="menu mb-3">
         <Link to="/audio" className="menulink">
             <img src={headphone} className="menuicon"></img>
             Audio- & hifi
@@ -41,10 +40,6 @@ const Menu = () => {
         <Link to="/components" className="menulink">
             <img src={cpu} className="menuicon"></img>
             Komponentit
-        </Link>
-        <Link to="/food&drinks" className="menulink">
-            <img src={drink} className="menuicon"></img>
-            Juoma & Ruoka
         </Link>
         <Link to="/cameras" className="menulink">
             <img src={camera} className="menuicon"></img>
