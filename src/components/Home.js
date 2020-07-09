@@ -3,7 +3,7 @@ import "./../App.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Menu from "./Menu";
-import etusivuKuva from "./../pictures/etusivuKuva.png";
+import etusivuKuva from "./../pictures/etusivuukuva.png";
 import Cookies from "universal-cookie";
 import Loggedinnavbar from "./Loggedinnavbar";
 
