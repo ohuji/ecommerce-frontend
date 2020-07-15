@@ -23,7 +23,7 @@ const Home = () => {
                      <div>
                         <img src={etusivuKuva} className="home-picture"></img>
 
-                           <h2 className="mt-4">
+                           <h2 className="mt-4 display-4">
                               Suosittuja tuotteita:
                            </h2>
                      </div>
@@ -43,7 +43,7 @@ const Home = () => {
                 <div>
                    <img src={etusivuKuva} className="home-picture"></img>
 
-                     <h2 className="mt-4">
+                     <h2 className="mt-4 display-4">
                         Suosittuja tuotteita:
                      </h2>
                 </div>
