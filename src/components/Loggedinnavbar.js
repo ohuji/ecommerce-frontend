@@ -4,7 +4,7 @@ import "./../App.css";
 import login from "./../icons/login-32.png";
 import shoppingCart from "./../icons/shopping-cart-32.png";
 import Cookies from "universal-cookie";
-import gear from "./../icons/gear-32.png";
+import profile from "./../icons/user-32.png";
 import logo2 from "./../pictures/logoo2.png";
 
 const cookies = new Cookies()
@@ -52,10 +52,10 @@ class Loggedinnavbar extends Component {
                 </li>
 
                 <li className="nav-item">
-                    <img src={gear} className="navbaricon"></img>
+                    <img src={profile} className="navbaricon"></img>
 
-                    <Link to="/settings" className="navlink">
-                        Asetukset
+                    <Link to="/profile" className="navlink">
+                        Profiili
                     </Link>
                 </li>
             </ul>

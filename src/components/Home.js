@@ -10,7 +10,7 @@ import Loggedinnavbar from "./Loggedinnavbar";
 const cookies = new Cookies();
 
 const Home = () => {
-    const cookieExists = cookies.get("Username") && cookies.get("Password")
+    const cookieExists = cookies.get("Username") && cookies.get("Password");
 
     if(!cookieExists) {
         return (
@@ -22,13 +22,17 @@ const Home = () => {
 
                      <div>
                         <img src={etusivuKuva} className="home-picture"></img>
+
+                           <h2 className="mt-4">
+                              Suosittuja tuotteita:
+                           </h2>
                      </div>
                   </div>
                </div>
               <Footer/>
             </div>
     )
-  } else {
+  } else if(cookieExists) {
     return (
         <div className="bg">
           <Loggedinnavbar/>
@@ -38,6 +42,10 @@ const Home = () => {
 
                 <div>
                    <img src={etusivuKuva} className="home-picture"></img>
+
+                     <h2 className="mt-4">
+                        Suosittuja tuotteita:
+                     </h2>
                 </div>
              </div>
           </div>

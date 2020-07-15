@@ -7,17 +7,23 @@ import Computerproducts from "./components/Computerproducts";
 import Userlogin from "./components/Userlogin";
 import Userregister from "./components/Userregister";
 import Choosecategory from './components/Choosecategory';
+import Sellaudio from './components/Sellaudio';
+import Userprofile from './components/Userprofile';
+import Faq from './components/Faq';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Route exact path="/" component={Home}/>
-        <Route path="/audio" component={Audioproducts}/>
+        <Route path="/audio/" component={Audioproducts}/>
         <Route path="/computers" component={Computerproducts}/>
         <Route path="/login" component={Userlogin}/>
         <Route path="/register" component={Userregister}/>
         <Route path="/category" component={Choosecategory}/>
+        <Route path="/sellaudio" component={Sellaudio}/>
+        <Route path="/profile" component={Userprofile}/>
+        <Route path="/faq" component={Faq}/>
       </BrowserRouter>
     </div>
   );

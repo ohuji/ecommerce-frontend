@@ -12,19 +12,39 @@ const cookies = new Cookies();
 class Userlogin extends Component {
     
         state = {
+            User: [],
             Username: "",
             Password: ""
-        }       
+        }
+
+    
+    getUser = () => {
+        const { Username, Password } = this.state;
+        Axios.get("http://localhost:5000/ecommerce/users", {
+            params: {
+            Username: Username,
+            Password: Password
+        }
+        })
+        .then(response => {
+            this.setState({ User: response });
+            console.log(response);
+        })
+    }
 
     handleSubmit = (e) => {
-        e.preventDefault()
-        const {Username, Password} = this.state;
+        e.preventDefault();
+        this.getUser();
+        const {Username, Password, User} = this.state;
+        const userID = toString(User.UserID);
 
         Axios.post("http://localhost:5000/ecommerce/users", this.state, {withCredentials: true})
         .then(response => {
-                console.log(response)
+                console.log(response);
                 cookies.set("Username", {Username} , { path: "/" });  
-                cookies.set("Password", {Password} , { path: "/" });   
+                cookies.set("Password", {Password} , { path: "/" });
+                cookies.set("UserID", {userID} , { path: "/" });
+                alert("Kirjauduttu onnistuneesti sisään!")   
         })
         .catch(error => {
             alert("Kirjautuminen epäonnistui!")
@@ -75,10 +95,10 @@ class Userlogin extends Component {
                                 required>
                               </input>
                             </div>
-                            
-                            <button type="submit" className="btn form-button mt-3 mb-3">        
-                                Kirjaudu         
-                            </button>
+                                 
+                            <button type="submit" className="btn form-button mt-3 mb-3">     
+                                    Kirjaudu   
+                            </button>    
                         </form>
                         </div>
                     </div>

@@ -39,19 +39,21 @@ class Audioproducts extends Component {
 
         const audioProductList = audioProducts.map((audioProduct) =>
         <div className="card product-card" key={audioProduct.ProductID}>
-            <Link to={"/"+audioProduct.ProductName} className="productLink">
-                
-                     <div className="card-body">
-                            <p className="product-name">
-                                {audioProduct.ProductName}
-                            </p>
-                            <p className="product-price">
-                                {audioProduct.Price+"€"}
-                            </p>
-                    </div>
-                
-              
-             </Link>
+                <div className="card-body">
+                    <Link to={"/"+audioProduct.ProductName} className="productLink">
+                        <p className="product-name">
+                            {audioProduct.ProductName}
+                        </p>
+
+                        <p className="product-price">
+                            {audioProduct.Price+"€"}
+                        </p>
+                    </Link>
+
+                        <button className="btn addCart">
+                            Lisää tuote ostoskoriin
+                        </button>
+                </div>
          </div>
         );
 

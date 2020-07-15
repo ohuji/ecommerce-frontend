@@ -13,57 +13,90 @@ import furniture from "./../icons/sofa-16.png";
 import book from "./../icons/book-16.png";
 import paperclip from "./../icons/paperclip-16.png";
 import sport from "./../icons/soccer-16.png";
+import question from "./../icons/question-mark-4-16.png";
+import login from "./../icons/login-16.png";
+import briefcase from "./../icons/briefcase-16.png";
 
 const Menu = () => {
     return (
-        <div className="menu mb-3">
+        <div className="menu">
+        <h2 className="menu-title">
+            Kategoriat
+        </h2>
+
         <Link to="/audio" className="menulink">
             <img src={headphone} className="menuicon"></img>
-            Audio- & hifi
+                Audio- & hifi
         </Link>
+
         <Link to="/computers" className="menulink">
             <img src={computer} className="menuicon"></img>
-            Tietokoneet
+                Tietokoneet
         </Link>
+
         <Link to="/phones" className="menulink">
             <img src={phone} className="menuicon"></img>
-            Puhelimet
+                Puhelimet
         </Link>
+
         <Link to="/televisions" className="menulink">
             <img src={tv} className="menuicon"></img>
-            Televisiot
+                Televisiot
         </Link>
+
         <Link to="/games" className="menulink">
             <img src={game} className="menuicon"></img>
-            Videopelit
+                Videopelit
         </Link>
+
         <Link to="/components" className="menulink">
             <img src={cpu} className="menuicon"></img>
-            Komponentit
+                Komponentit
         </Link>
+
         <Link to="/cameras" className="menulink">
             <img src={camera} className="menuicon"></img>
-            Kamerat
+                Kamerat
         </Link>
+
         <Link to="/music" className="menulink">
             <img src={music} className="menuicon"></img>
-            Musiikki
+                Musiikki
         </Link>
+
         <Link to="/furniture" className="menulink">
             <img src={furniture} className="menuicon"></img>
-            Huonekalut
+                Huonekalut
         </Link>
+
         <Link to="/books" className="menulink">
             <img src={book} className="menuicon"></img>
-            Kirjat
+                Kirjat
         </Link>
+
         <Link to="/office" className="menulink">
             <img src={paperclip} className="menuicon"></img>
-            Toimistotarvikkeet
+                Toimistotarvikkeet
         </Link>
+
         <Link to="/sports&outdoors" className="menulink">
             <img src={sport} className="menuicon"></img>
-            Urheilu & Ulkoilu
+                Urheilu & Ulkoilu
+        </Link>
+
+        <Link to="/careers" className="second-menu-title">
+            <img src={briefcase} className="menuicon"></img>
+                Työpaikat
+        </Link>
+
+        <Link to="/faq" className="menulink">
+        <img src={question} className="menuicon"></img>
+            Usein kysytyt kysymykset
+        </Link>
+
+        <Link to="/login" className="menulink">
+            <img src={login} className="menuicon"></img>
+                Kirjaudu sisään
         </Link>
     </div>
     )
