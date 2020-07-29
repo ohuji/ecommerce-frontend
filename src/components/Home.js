@@ -6,6 +6,8 @@ import Menu from "./Menu";
 import etusivuKuva from "./../pictures/etusivuukuva.png";
 import Cookies from "universal-cookie";
 import Loggedinnavbar from "./Loggedinnavbar";
+import { Link } from "react-router-dom";
+import gb1kpe from "./../pictures/gb1kpe.png";
 
 const cookies = new Cookies();
 
@@ -23,9 +25,27 @@ const Home = () => {
                      <div>
                         <img src={etusivuKuva} className="home-picture"></img>
 
+                        <div>
                            <h2 className="mt-4 display-4">
-                              Suosittuja tuotteita:
+                              Näyteikkuna:
                            </h2>
+
+                           
+                           <div className="card product-card">
+                              <Link to="/YamahaGB1KPEmustaflyygeli" className="home-product-link">
+                                 <div className="card-body">
+                                    <p className="home-product-name">
+                                       Yamaha GB1KPE musta flyygeli 
+                                    </p>
+                                    <img src={gb1kpe}></img>
+                                    <p className="home-product-price">
+                                       9000€
+                                    </p>
+                                 </div>
+                              </Link>
+                           </div>
+                  
+                        </div>
                      </div>
                   </div>
                </div>
@@ -41,11 +61,28 @@ const Home = () => {
                    <Menu/>
 
                 <div>
-                   <img src={etusivuKuva} className="home-picture"></img>
+                  <img src={etusivuKuva} className="home-picture"></img>
 
+                  <div>
                      <h2 className="mt-4 display-4">
-                        Suosittuja tuotteita:
+                        Näyteikkuna:
                      </h2>
+
+                     <div className="card product-card">
+                        <Link to="/YamahaGB1KPEmustaflyygeli" className="home-product-link">
+                           <div className="card-body">
+                              <p className="home-product-name">
+                                 Yamaha GB1KPE musta flyygeli 
+                              </p>
+                              <img src={gb1kpe}></img>
+                              <p className="home-product-price">
+                                 9000€
+                              </p>
+                           </div>
+                        </Link>
+                     </div>
+
+                  </div>
                 </div>
              </div>
           </div>

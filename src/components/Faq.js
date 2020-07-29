@@ -5,6 +5,7 @@ import Loggedinnavbar from "./Loggedinnavbar";
 import Footer from "./Footer";
 import Menu from "./Menu";
 import Cookies from "universal-cookie";
+import arrowDown from "./../icons/arrow-204-16.png";
 
 const cookies = new Cookies();
 
@@ -27,8 +28,9 @@ const Faq = () => {
                                 <div className="accordion" id="accordion">
                                     <div className="card question-card offset-0">
                                         <div className="card-header">
-                                            <button className="btn question-button btn-block collapsed" data-toggle="collapse" data-target="#first-question">                      
-                                               1. Onko verkkokauppa aito?
+                                            <button className="btn question-button btn-block collapsed" data-toggle="collapse" data-target="#first-question">    
+                                                1. Onko verkkokauppa aito?
+                                                <img src={arrowDown} className="ml-3"></img>
                                             </button>
                                         </div>
 
@@ -45,6 +47,7 @@ const Faq = () => {
                                         <div className="card-header">
                                             <button className="btn question-button btn-block collapsed" data-toggle="collapse" data-target="#second-question">                      
                                                2. Saako käyttämiä rahoja takaisin?
+                                               <img src={arrowDown} className="ml-3"></img>
                                             </button>
                                         </div>
 
@@ -60,11 +63,29 @@ const Faq = () => {
                                     <div className="card question-card offset-0">
                                         <div className="card-header">
                                             <button className="btn question-button btn-block collapsed" data-toggle="collapse" data-target="#third-question">                      
-                                               3. Miten voin ottaa yhteyttä sivun ylläpitoon?
+                                               3. Miten saan tuotteeni näkymään näyteikkunaan?
+                                               <img src={arrowDown} className="ml-3"></img>
                                             </button>
                                         </div>
 
                                         <div className="collapse question-collapse" id="third-question" data-parent="#accordion">
+                                            <div className="card-body">
+                                                Näyteikkunaan saa tuotteen ottamalla yhteyden ylläpitoon ja maksamalla 20 euroa päivältä tuotteen pidosta siellä.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="accordion" id="accordion">
+                                    <div className="card question-card offset-0">
+                                        <div className="card-header">
+                                            <button className="btn question-button btn-block collapsed" data-toggle="collapse" data-target="#fourth-question">                      
+                                               4. Miten voin ottaa yhteyttä sivun ylläpitoon?
+                                               <img src={arrowDown} className="ml-3"></img>
+                                            </button>
+                                        </div>
+
+                                        <div className="collapse question-collapse" id="fourth-question" data-parent="#accordion">
                                             <div className="card-body">
                                                Sivun luojaan voi ottaa yhteyttä sähköpostilla. Sähköpostiosoite on: juhsalomaki@gmail.com
                                             </div>
@@ -92,8 +113,9 @@ const Faq = () => {
                                 <div className="accordion" id="accordion">
                                     <div className="card question-card offset-0">
                                         <div className="card-header">
-                                            <button className="btn question-button btn-block collapsed" data-toggle="collapse" data-target="#first-question">                      
+                                            <button className="btn question-button btn-block collapsed" data-toggle="collapse" data-target="#first-question">                                  
                                                1. Onko verkkokauppa aito?
+                                               <img src={arrowDown} className="ml-3"></img>
                                             </button>
                                         </div>
 
@@ -110,6 +132,7 @@ const Faq = () => {
                                         <div className="card-header">
                                             <button className="btn question-button btn-block collapsed" data-toggle="collapse" data-target="#second-question">                      
                                                2. Saako käyttämiä rahoja takaisin?
+                                               <img src={arrowDown} className="ml-3"></img>
                                             </button>
                                         </div>
 
@@ -125,11 +148,29 @@ const Faq = () => {
                                     <div className="card question-card offset-0">
                                         <div className="card-header">
                                             <button className="btn question-button btn-block collapsed" data-toggle="collapse" data-target="#third-question">                      
-                                               3. Miten voin ottaa yhteyttä sivun ylläpitoon?
+                                               3. Miten saan tuotteeni näkymään näyteikkunaan?
+                                               <img src={arrowDown} className="ml-3"></img>
                                             </button>
                                         </div>
 
                                         <div className="collapse question-collapse" id="third-question" data-parent="#accordion">
+                                            <div className="card-body">
+                                                Näyteikkunaan saa tuotteen ottamalla yhteyden ylläpitoon ja maksamalla 20 euroa päivältä tuotteen pidosta siellä.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="accordion" id="accordion">
+                                    <div className="card question-card offset-0">
+                                        <div className="card-header">
+                                            <button className="btn question-button btn-block collapsed" data-toggle="collapse" data-target="#fourth-question">                      
+                                               4. Miten voin ottaa yhteyttä sivun ylläpitoon?
+                                               <img src={arrowDown} className="ml-3"></img>
+                                            </button>
+                                        </div>
+
+                                        <div className="collapse question-collapse" id="fourth-question" data-parent="#accordion">
                                             <div className="card-body">
                                                Sivun luojaan voi ottaa yhteyttä sähköpostilla. Sähköpostiosoite on: juhsalomaki@gmail.com
                                             </div>

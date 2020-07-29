@@ -266,3 +266,34 @@
   margin-bottom: 25px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
+
+.product-card {
+  height: auto;
+  width: 100%;
+  max-height: 385px;
+  max-width: 260px;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2), 0 15px 35px 0 rgba(0, 0, 0, 0.19);
+}
+
+.home-product-name {
+  font-size: 18px;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.home-product-price {
+  font-weight: bold;
+  font-size: 22px;
+  color: #6E6658;
+  margin-bottom: 0px;
+}
+
+.home-product-link:hover {
+  text-decoration: none;
+}
