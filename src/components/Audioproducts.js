@@ -38,9 +38,9 @@ class Audioproducts extends Component {
         const { audioProducts } = this.state;
 
         const audioProductList = audioProducts.map((audioProduct) =>
-        <div className="card product-card" key={audioProduct.ProductID}>
-                <div className="card-body">
-                    <Link to={"/"+audioProduct.ProductName} className="productLink">
+        <ul className="list-group list-group-flush" key={audioProduct.ProductID}>
+                <li className="list-group-item category-item">
+                    
                         <p className="product-name">
                             {audioProduct.ProductName}
                         </p>
@@ -48,13 +48,14 @@ class Audioproducts extends Component {
                         <p className="product-price">
                             {audioProduct.Price+"€"}
                         </p>
-                    </Link>
 
-                        <button className="btn addCart">
-                            Lisää tuote ostoskoriin
-                        </button>
-                </div>
-         </div>
+                        <Link to={"/"+audioProduct.ProductName} className="productLink"> 
+                            <button className="btn read-more">
+                                Lue lisää             
+                            </button>
+                        </Link>
+                </li>
+         </ul>
         );
 
         return(
@@ -62,10 +63,13 @@ class Audioproducts extends Component {
                 <Navbar/>
                 <div className="container-fluid">
                     <div className="row">
-                        <Menu/>
-                        
-                        {audioProductList}         
-                    </div>
+                        <Menu/>     
+                         
+                        <div className="offset-2">
+
+                            {audioProductList}  
+                        </div>
+                    </div> 
                 </div>
                 <Footer/>
             </div>

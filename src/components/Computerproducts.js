@@ -38,21 +38,24 @@ class Computerproducts extends Component {
         const { computers } = this.state;
 
         const computerList = computers.map((computer) =>
-        <div className="card product-card" key={computer.ProductID}>
-            <Link to={"/"+computer.ProductName} className="productLink">
-                
-                     <div className="card-body">
-                            <p className="product-name">
-                                {computer.ProductName}
-                            </p>
-                            <p className="product-price">
-                                {computer.Price+"€"}
-                            </p>
-                    </div>
-                
-              
-             </Link>
-         </div>
+        <ul className="list-group list-group-flush" key={computer.ProductID}>
+            <li className="list-group-item category-item">
+            
+                <p className="product-name">
+                    {computer.ProductName}
+                </p>
+
+                <p className="product-price">
+                    {computer.Price+"€"}
+                </p>
+
+                <Link to={"/"+computer.ProductName} className="productLink"> 
+                    <button className="btn read-more">
+                        Lue lisää             
+                    </button>
+                </Link>
+            </li>
+        </ul>
         );
 
         return(
@@ -62,7 +65,9 @@ class Computerproducts extends Component {
                     <div className="row">
                         <Menu/>
                         
-                        {computerList}         
+                        <div className="offset-2">
+                            {computerList}   
+                        </div>      
                     </div>
                 </div>
                 <Footer/>
