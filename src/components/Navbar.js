@@ -16,7 +16,7 @@ const Navbar = () => {
 
             <ul className="nav">
                 <li className="nav-item">
-                    <button className="btn btn-outline-light">
+                    <button className="btn nav-button btn-outline-light">
                         <Link to="/login" className="navlink">
                             Myy tuote
                          </Link>
@@ -39,8 +39,6 @@ const Navbar = () => {
                     </Link>
                 </li>
             </ul>
-
-
         </nav>
     )
 }

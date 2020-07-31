@@ -53,15 +53,19 @@
 }
 
 .siteFooter {
-  padding-top: 27px;
-  padding-bottom: 15px;
-  background-color: #112D32;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #254E58;
 }
 
 .footer-paragraph {
-  color: #FFFFFF;
-  font-size: 14px;
-  margin-left: 12px;
+  color: #FFFF;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer-header {
+  color: #FFFF;
 }
 
 .navbaricon {
@@ -148,7 +152,7 @@
   font-weight: 600;
 }
 
-.nav-button {
+.nav-button-second {
   background-color: #112D32;
   color: #FFFFFF;
   border: none;
@@ -296,4 +300,38 @@
 
 .home-product-link:hover {
   text-decoration: none;
+}
+
+.footer-icon {
+  max-height: 32px;
+}
+
+.site-footer-second {
+  background-color: #112D32;
+}
+
+.copyright-text {
+  font-size: 14px;
+  color: #FFFF;
+  margin-top: 32px;
+}
+
+.footer-link {
+  color: #FFFF;
+  font-size: 15px;
+  margin-right: 185px;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  text-decoration: none;
+  color: #A4B3B6;
+}
+
+.nav-button {
+  height: auto;
+  max-height: 35px;
+  border: 1px solid #FFFF;
+  padding-bottom: 5px;
+  padding-top: 2px;
 }
