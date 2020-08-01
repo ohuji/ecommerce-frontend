@@ -335,3 +335,8 @@
   padding-bottom: 5px;
   padding-top: 2px;
 }
+
+.carousel-inner {
+  max-height: 450px !important;
+  max-width: 1550px !important;
+}
