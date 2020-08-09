@@ -16,20 +16,21 @@ const Navbar = () => {
 
             <ul className="nav">
                 <li className="nav-item">
-                    <button className="btn nav-button btn-outline-light">
-                        <Link to="/login" className="navlink">
-                            Myy tuote
-                         </Link>
-                    </button>
+                    <Link to="/login" className="navlink">
+                        <button className="btn nav-button btn-outline-light">
+                            Myy tuote     
+                        </button>
+                    </Link>
                 </li>
 
                 <li className="nav-item">
                     <img src={login} className="navbaricon"></img>
 
-                    <Link to="/login" className="navlink">
+                    <Link to="/login" className="navlink">             
                         Kirjaudu
                     </Link>
                 </li>
+
 
                 <li className="nav-item">
                     <img src={shoppingCart} className="navbaricon"></img>

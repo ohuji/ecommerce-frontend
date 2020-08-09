@@ -64,6 +64,7 @@ class Userlogin extends Component {
                     <div className="card loginCard">
                         <div className="card-body">
                         <img src={logo1}></img>
+
                         <h2 className="card-title mt-3">
                             Kirjaudu Sisään
                         </h2>
@@ -97,7 +98,7 @@ class Userlogin extends Component {
                             </div>
                                  
                             <button type="submit" className="btn form-button mt-3 mb-3">     
-                                    Kirjaudu   
+                                Kirjaudu   
                             </button>    
                         </form>
                         </div>
@@ -114,7 +115,7 @@ class Userlogin extends Component {
                                 
                             </div>
                         </div>
-                </div>
+                    </div>
                 <Footer/>
             </div>
         )

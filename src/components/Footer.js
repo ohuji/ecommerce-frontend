@@ -44,7 +44,7 @@ const Footer = () => {
                         </p>
 
                         <p className="footer-paragraph mb-0 mr-5">
-                            +358452021944&nbsp;
+                            358452021944 &nbsp;&nbsp;
                         </p>
 
                         <p className="footer-paragraph mb-1 ml-3"> 

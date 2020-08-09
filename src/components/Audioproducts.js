@@ -49,7 +49,7 @@ class Audioproducts extends Component {
                             {audioProduct.Price+"€"}
                         </p>
 
-                        <Link to={"/"+audioProduct.ProductName} className="productLink"> 
+                        <Link to={"/"+audioProduct.ProductID} className="productLink"> 
                             <button className="btn read-more">
                                 Lue lisää             
                             </button>
@@ -66,7 +66,6 @@ class Audioproducts extends Component {
                         <Menu/>     
                          
                         <div className="offset-2">
-
                             {audioProductList}  
                         </div>
                     </div> 

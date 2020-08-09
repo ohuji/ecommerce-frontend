@@ -10,6 +10,7 @@ import Choosecategory from './components/Choosecategory';
 import Sellaudio from './components/Sellaudio';
 import Userprofile from './components/Userprofile';
 import Faq from './components/Faq';
+import Shoppingcart from "./components/Shoppingcart";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/sellaudio" component={Sellaudio}/>
         <Route path="/profile" component={Userprofile}/>
         <Route path="/faq" component={Faq}/>
+        <Route path="/shoppingcart" component={Shoppingcart}/>
       </BrowserRouter>
     </div>
   );

@@ -27,19 +27,20 @@ class Loggedinnavbar extends Component {
 
             <ul className="nav">
                 <li className="nav-item">
-                    <button className="btn nav-button btn-outline-light">
-                        <Link to="/category" className="navlink">
-                            Myy tuote
-                         </Link>
-                    </button>
+                    <Link to="/category" className="navlink">
+                        <button className="btn nav-button btn-outline-light">      
+                            Myy tuote 
+                        </button>
+                    </Link>
                 </li>
 
                 <li className="nav-item">
                     <img src={login} className="navbaricon"></img>
+
                     <button className="nav-button-second" onClick={this.handleClick()}>
-                    <Link to="/" className="navlink">
-                        Kirjaudu Ulos
-                    </Link>
+                        <Link to="/" className="navlink">
+                            Kirjaudu Ulos
+                        </Link>
                     </button>
                 </li>
 

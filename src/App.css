@@ -27,6 +27,7 @@
   width: 350px;
   float: left;
   margin-left: 0px;
+  border-right: 1px solid #A4B3B6;
 }
 
 .menulink {
@@ -339,4 +340,82 @@
 .carousel-inner {
   max-height: 450px !important;
   max-width: 1550px !important;
+}
+
+.cart-bg {
+  width: 1200px;
+  height: 700px;
+  background-color: #FFFF;
+  margin-left: 355px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2), 0 15px 35px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cart-card {
+  background-color: #f4f4f4;
+  width: 100%;
+  max-width: 700px;
+  height: 200px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  margin-left: 35px;
+}
+
+.cart-header {
+  margin-right: 500px;
+  color: #000000;
+  font-weight: 475;
+}
+
+.cart-amount-card {
+  width: 100%;
+  max-width: 425px;
+  height: 275px;
+  background-color: #f4f4f4;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.cart-amount-header {
+  color: #000000;
+  font-weight: 475;
+  margin-right: 125px;
+}
+
+.cart-amount-paragraph {
+  font-size: 20px;
+  margin-right: 100px;
+  margin-left: 50px;
+}
+
+.cart-price {
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.cart-paymentmethods {
+  background-color: #f4f4f4;
+  width: 100%;
+  max-width: 700px;
+  height: 150px;
+  margin-bottom: 25px;
+  margin-left: 35px;
+}
+
+.cart-button {
+  background-color: #112D32;
+  color: #FFFF;
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  font-size: 20px;
+}
+
+.cart-button:hover {
+  color: #A4B3B6;
+}
+
+.line {
+  border-bottom: 2px solid #FFFF;
 }
