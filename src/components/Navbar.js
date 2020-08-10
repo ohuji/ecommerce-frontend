@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./../App.css";
-import login from "./../icons/login-32.png";
-import shoppingCart from "./../icons/shopping-cart-32.png";
+import login from "./../icons/account-login-24.png";
+import shoppingCart from "./../icons/cart-59-24.png";
 import logo2 from "./../pictures/logoo2.png";
+import gear from "./../icons/gear-24.png";
 
 const Navbar = () => {
     return (
@@ -17,26 +18,20 @@ const Navbar = () => {
             <ul className="nav">
                 <li className="nav-item">
                     <Link to="/login" className="navlink">
-                        <button className="btn nav-button btn-outline-light">
-                            Myy tuote     
-                        </button>
-                    </Link>
-                </li>
-
-                <li className="nav-item">
-                    <img src={login} className="navbaricon"></img>
-
-                    <Link to="/login" className="navlink">             
-                        Kirjaudu
+                        <img src={login} className="navbaricon"></img>
                     </Link>
                 </li>
 
 
                 <li className="nav-item">
-                    <img src={shoppingCart} className="navbaricon"></img>
-
                     <Link to="/login" className="navlink">
-                        Ostoskori
+                        <img src={shoppingCart} className="navbaricon"></img>
+                    </Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link to="/login" className="navlink">
+                        <img src={gear} className="navbaricon"></img>
                     </Link>
                 </li>
             </ul>

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./../App.css";
-import login from "./../icons/login-32.png";
-import shoppingCart from "./../icons/shopping-cart-32.png";
+import login from "./../icons/account-login-24.png";
+import shoppingCart from "./../icons/cart-59-24.png";
 import Cookies from "universal-cookie";
-import profile from "./../icons/user-32.png";
+import profile from "./../icons/gear-24.png";
 import logo2 from "./../pictures/logoo2.png";
 
 const cookies = new Cookies()
@@ -35,28 +35,22 @@ class Loggedinnavbar extends Component {
                 </li>
 
                 <li className="nav-item">
-                    <img src={login} className="navbaricon"></img>
-
                     <button className="nav-button-second" onClick={this.handleClick()}>
                         <Link to="/" className="navlink">
-                            Kirjaudu Ulos
+                            <img src={login} className="navbaricon"></img>
                         </Link>
                     </button>
                 </li>
 
                 <li className="nav-item">
-                    <img src={shoppingCart} className="navbaricon"></img>
-
                     <Link to="/shoppingcart" className="navlink">
-                        Ostoskori
+                        <img src={shoppingCart} className="navbaricon"></img>
                     </Link>
                 </li>
 
                 <li className="nav-item">
-                    <img src={profile} className="navbaricon"></img>
-
                     <Link to="/profile" className="navlink">
-                        Profiili
+                        <img src={profile} className="navbaricon"></img>
                     </Link>
                 </li>
             </ul>
