@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Menu from "./Menu";
 import { Link } from "react-router-dom";
+import headphones from "./../icons/headphones-3-48.png";
 
 class Audioproducts extends Component {
     
@@ -49,7 +50,7 @@ class Audioproducts extends Component {
                             {audioProduct.Price+"€"}
                         </p>
 
-                        <Link to={"/"+audioProduct.ProductID} className="productLink"> 
+                        <Link to={"/audio/"+audioProduct.ProductID} className="productLink"> 
                             <button className="btn read-more">
                                 Lue lisää             
                             </button>
@@ -63,11 +64,27 @@ class Audioproducts extends Component {
                 <Navbar/>
                 <div className="container-fluid">
                     <div className="row">
-                        <Menu/>     
+                        <Menu/>
+
+                        <div>
+                            <div className="category-info-card mt-5 mb-5 offset-2">
+                                <div className="row">
+                                    <h1 className="offset-4 mr-3 mb-3">
+                                            Audio- ja hifi
+                                    </h1>
+
+                                    <img src={headphones} className="icon"></img>
+                                </div>
+                                <p className="category-info-paragraph">
+                                    Kodin viihde herää henkiin kunnollisella äänentoistolla. Ecommercesta löydät laajan valikoiman äänentoistovälineitä jokaiseen tilanteeseen ja tilaan. Meiltä saat kotiin valmiit kotiteatteripaketit, stereopaketit, vahvistimet ja kaiuttimet sekä tietysti asianmukaiset tarvikkeet kuten kaapelit, kiinnikkeet ja jalustat. Liikkuvalle ihmiselle tarjoamme laajan valikoiman kuulokkeita, MP3-soittimia ja Bluetooth-kaiuttimia ja levyjen kuuntelijoille CD-soittimet ja vinyylisoittimet. Osta äänentoistolaitteet kätevästi netistä – todennäköisesti aina halvemmalla!
+                                </p>
+                            </div>
+
+                            <div className="offset-3">
+                                {audioProductList}  
+                            </div>
+                        </div>     
                          
-                        <div className="offset-2">
-                            {audioProductList}  
-                        </div>
                     </div> 
                 </div>
                 <Footer/>

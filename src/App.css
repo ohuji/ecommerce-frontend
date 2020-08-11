@@ -425,3 +425,19 @@
 .line {
   border-bottom: 2px solid #FFFF;
 }
+
+.category-info-card {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  max-height: 200px;
+  background-color: #FFFF;
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2), 0 15px 35px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.icon {
+  height: 48px;
+  width: 48px;
+}
