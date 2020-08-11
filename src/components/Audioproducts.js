@@ -50,7 +50,7 @@ class Audioproducts extends Component {
                             {audioProduct.Price+"€"}
                         </p>
 
-                        <Link to={"/audio/"+audioProduct.ProductID} className="productLink"> 
+                        <Link to={`/audio/${audioProduct.ProductID}`} className="productLink"> 
                             <button className="btn read-more">
                                 Lue lisää             
                             </button>

@@ -19,8 +19,8 @@ function App() {
       <BrowserRouter>
         <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/audio" component={Audioproducts}/>
         <Route path="/audio/:id" component={Audioproduct}/>
+        <Route path="/audio" component={Audioproducts}/>
         <Route path="/computers" component={Computerproducts}/>
         <Route path="/login" component={Userlogin}/>
         <Route path="/register" component={Userregister}/>
