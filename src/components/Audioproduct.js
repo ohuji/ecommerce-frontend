@@ -6,6 +6,7 @@ import Loggedinnavbar from "./Loggedinnavbar";
 import Footer from "./Footer";
 import { useParams } from "react-router-dom";
 import Axios from "axios";
+import Menu from "./Menu";
 
 const cookies = new Cookies()
 
@@ -28,8 +29,14 @@ const Audioproduct = () => {
         return (
             <div className="bg">
                 <Navbar/>
-                    <div>
-                        <h1></h1>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <Menu/>
+
+                            <div className="product-page-card">
+                                
+                            </div>
+                        </div>
                     </div>
                 <Footer/>
             </div>

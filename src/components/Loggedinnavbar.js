@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./../App.css";
-import login from "./../icons/account-login-24.png";
+import logout from "./../icons/account-logout-24.png";
 import shoppingCart from "./../icons/cart-59-24.png";
 import Cookies from "universal-cookie";
 import profile from "./../icons/gear-24.png";
@@ -37,7 +37,7 @@ class Loggedinnavbar extends Component {
                 <li className="nav-item">
                     <button className="nav-button-second" onClick={this.handleClick()}>
                         <Link to="/" className="navlink">
-                            <img src={login} className="navbaricon"></img>
+                            <img src={logout} className="navbaricon"></img>
                         </Link>
                     </button>
                 </li>

@@ -441,3 +441,11 @@
   height: 48px;
   width: 48px;
 }
+
+.product-page-card {
+  width: 1000px;
+  height: 750px;
+  background-color: #FFFF;
+  margin-left: 300px;
+  margin-top: 80px;
+}
