@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Loggedinnavbar from "./Loggedinnavbar";
 import "./../App.css";
 import { Link } from "react-router-dom";
@@ -8,8 +8,12 @@ import Visa from "./../icons/visa.png";
 import MC from "./../icons/mc.png";
 import Paypal from "./../icons/paypal.png";
 import Skrill from "./../icons/skrill.png";
+import Cookies from "universal-cookie";
+
 
 const Shoppingcart = () => {
+
+
     return (
         <div className="bg">
             <Loggedinnavbar/>

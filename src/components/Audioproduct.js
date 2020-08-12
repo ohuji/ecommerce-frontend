@@ -71,6 +71,15 @@ const Audioproduct = () => {
             </div>
         ));
 
+        const handleClick = (e) => {
+            const productFilter = audioProducts.filter(audioProduct => audioProduct.ProductID === Number(id));
+            
+            cookies.set("audio", {productFilter} , { path: "/" });
+            console.log(productFilter);
+
+            alert("tuote lisätty ostoskoriin") 
+        }
+
         if(!cookieExists) {
         return (
             <div className="bg">
@@ -82,7 +91,7 @@ const Audioproduct = () => {
                             <div className="product-page-card">
                                 {product}
 
-                                <button className="product-page-button btn">
+                                <button className="product-page-button btn" onClick={handleClick}>
                                     Lisää ostoskoriin
                                     <img src={cart} className="ml-3 mb-1"></img>
                                 </button>
