@@ -32,7 +32,7 @@ const Audioproduct = () => {
                         {filteredProduct.ProductName}
                     </h1>
 
-                    <div>
+                    <div className="product-page-price-div">
                         <p className="product-page-price-title">
                             Hinta (Sisältää 24% Alv):
                         </p>
@@ -73,11 +73,13 @@ const Audioproduct = () => {
 
         const handleClick = (e) => {
             const productFilter = audioProducts.filter(audioProduct => audioProduct.ProductID === Number(id));
+
+            let randomNumber = Math.floor((Math.random() * 1000) + 1);
             
-            cookies.set("audio", {productFilter} , { path: "/" });
+            cookies.set(`audio${randomNumber}`, {productFilter} , { path: "/" });
             console.log(productFilter);
 
-            alert("tuote lisätty ostoskoriin") 
+            alert("tuote lisätty ostoskoriin"); 
         }
 
         if(!cookieExists) {

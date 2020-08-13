@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Loggedinnavbar from "./Loggedinnavbar";
 import "./../App.css";
 import { Link } from "react-router-dom";
@@ -10,8 +10,20 @@ import Paypal from "./../icons/paypal.png";
 import Skrill from "./../icons/skrill.png";
 import Cookies from "universal-cookie";
 
+const cookies = new Cookies();
 
 const Shoppingcart = () => {
+
+    let [cookieList, setCookieList] = useState([]);
+
+    useEffect(() => {
+        let allCookies = cookies.getAll();
+        const toArray = Object.entries(allCookies);
+        setCookieList(toArray);
+    }, []);
+
+    let filter = cookieList.filter(name => name[0][0] === "a");
+    console.log(filter);
 
 
     return (
