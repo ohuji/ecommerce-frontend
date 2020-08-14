@@ -23,6 +23,24 @@ const Shoppingcart = () => {
     }, []);
 
     let filter = cookieList.filter(name => name[0][0] === "a");
+    console.log(filter)
+
+    const asd = filter.map(filteredMap => (
+        <ul className="list-group shoppingcart-list" key={filteredMap[1].productFilter[0].ProductName}>
+            <li className="list-group-item">
+            <div className="row">
+                    <p className="shoppingcart-paragraph">
+                        {filteredMap[1].productFilter[0].ProductName}
+                    </p>
+                    <p className="shoppingcart-price">
+                        {filteredMap[1].productFilter[0].Price}
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+    ));
+
     console.log(filter);
 
 
@@ -36,6 +54,10 @@ const Shoppingcart = () => {
                                 <h2 className="cart-header mt-3">
                                     Ostoskori
                                 </h2>
+
+                                <div>
+                                    {asd}
+                                </div>
                             </div>
 
                             <div className="cart-amount-card">

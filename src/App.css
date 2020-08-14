@@ -361,11 +361,15 @@
 .cart-card {
   background-color: #f4f4f4;
   width: 100%;
+  height: auto;
   max-width: 700px;
-  height: 200px;
+  max-height: 1000px;
   margin-bottom: 25px;
   margin-top: 25px;
   margin-left: 35px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .cart-header {
@@ -521,4 +525,19 @@
   font-size: 18px;
   font-weight: 500;
   margin-top: 35px;
+}
+
+.shoppingcart-paragraph {
+  font-size: 20px;
+  margin-left: 25px;
+}
+
+.shoppingcart-price {
+  font-size: 20px;
+  margin-left: 600px;
+  color: #4F4A41;
+}
+
+.shoppingcart-list {
+  margin-bottom: 10px;
 }

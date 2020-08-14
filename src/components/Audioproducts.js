@@ -87,7 +87,7 @@ class Audioproducts extends Component {
                                     </p>
                                 </div>
 
-                                <div className="offset-3">
+                                <div className="offset-3 mb-4">
                                     {audioProductList}  
                                 </div>
                             </div>     
@@ -119,7 +119,7 @@ class Audioproducts extends Component {
                                     </p>
                                 </div>
 
-                                <div className="offset-3">
+                                <div className="offset-3 mb-4">
                                     {audioProductList}  
                                 </div>
                             </div>     
