@@ -25,7 +25,7 @@ const Shoppingcart = () => {
     let filter = cookieList.filter(name => name[0][0] === "a");
     console.log(filter)
 
-    const asd = filter.map(filteredMap => (
+    const shoppingList = filter.map(filteredMap => (
         <ul className="list-group shoppingcart-list" key={filteredMap[1].productFilter[0].ProductName}>
             <li className="list-group-item">
             <div className="row">
@@ -56,7 +56,7 @@ const Shoppingcart = () => {
                                 </h2>
 
                                 <div>
-                                    {asd}
+                                    {shoppingList}
                                 </div>
                             </div>
 
