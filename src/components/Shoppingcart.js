@@ -9,6 +9,7 @@ import MC from "./../icons/mc.png";
 import Paypal from "./../icons/paypal.png";
 import Skrill from "./../icons/skrill.png";
 import Cookies from "universal-cookie";
+import Delete from "./../icons/delete-16.png";
 
 const cookies = new Cookies();
 
@@ -22,9 +23,28 @@ const Shoppingcart = () => {
         setCookieList(toArray);
     }, []);
 
-    let filter = cookieList.filter(name => name[0][0] === "a");
-    console.log(filter);
+    const filter = cookieList.filter(name => name[0][0] === "a");
 
+    const shoppingList = filter.map(filteredProduct => (
+        <ul className="list-group cart-list" key={filteredProduct[1].productFilter[0].Description}>
+            <li className="list-group-item">
+                <div className="row">
+                    <p className="cart-item-name">
+                        {filteredProduct[1].productFilter[0].ProductName}
+                    </p>
+
+                    <p className="cart-item-price">
+                        {filteredProduct[1].productFilter[0].Price+" €"}
+                    </p>
+
+                    <button type="button" className="btn cart-delete">
+                        Poista tuote
+                        <img className="delete-icon" src={Delete}></img>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    ));
 
     return (
         <div className="bg">
@@ -36,6 +56,8 @@ const Shoppingcart = () => {
                                 <h2 className="cart-header mt-3">
                                     Ostoskori
                                 </h2>
+
+                                {shoppingList}
                             </div>
 
                             <div className="cart-amount-card">

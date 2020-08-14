@@ -349,20 +349,21 @@
 }
 
 .cart-bg {
-  width: 1200px;
-  height: 700px;
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
   background-color: #FFFF;
   margin-left: 355px;
-  margin-top: 105px;
-  margin-bottom: 105px;
+  margin-top: 190px;
+  margin-bottom: 190px;
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2), 0 15px 35px 0 rgba(0, 0, 0, 0.19);
 }
 
 .cart-card {
   background-color: #f4f4f4;
   width: 100%;
+  height: auto;
   max-width: 700px;
-  height: 200px;
   margin-bottom: 25px;
   margin-top: 25px;
   margin-left: 35px;
@@ -521,4 +522,45 @@
   font-size: 18px;
   font-weight: 500;
   margin-top: 35px;
+}
+
+.cart-list {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+
+.cart-delete {
+  color: #FFFF;
+  background-color: #112D32;
+  font-size: 15px;
+  margin-left: 510px;
+  position: absolute;
+}
+
+.cart-delete:hover {
+  color: #A4B3B6;
+}
+
+.cart-item-name {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.cart-item-price {
+  position: absolute;
+  margin-left: 400px;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #4F4A41;
+  font-weight: 500;
+}
+
+.delete-icon {
+  margin-left: 5px;
+  margin-bottom: 2px;
 }
