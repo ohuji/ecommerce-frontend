@@ -513,7 +513,7 @@
 }
 
 .product-page-manufacturer-div {
-  margin-top: 20px;
+  margin-top: 75px;
   margin-left: 900px;
   border-top: 2px solid #D3D3D3;
 }
@@ -563,4 +563,9 @@
 .delete-icon {
   margin-left: 5px;
   margin-bottom: 2px;
+}
+
+.product-page-price-div {
+  position: absolute;
+  margin-left: 905px;
 }

@@ -23,6 +23,12 @@ const Shoppingcart = () => {
         setCookieList(toArray);
     }, []);
 
+    const handleClick = (e) => {
+        cookies.remove(`${filter[0][0]}`);
+
+        alert("Tuote poistettu ostoskorista");
+    }
+
     const filter = cookieList.filter(name => name[0][0] === "a");
 
     const shoppingList = filter.map(filteredProduct => (
@@ -37,8 +43,10 @@ const Shoppingcart = () => {
                         {filteredProduct[1].productFilter[0].Price+" €"}
                     </p>
 
-                    <button type="button" className="btn cart-delete">
-                        Poista tuote
+                    <button type="button"
+                     className="btn cart-delete"
+                     onClick={handleClick}>
+                            Poista tuote
                         <img className="delete-icon" src={Delete}></img>
                     </button>
                 </div>
