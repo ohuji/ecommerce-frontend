@@ -378,7 +378,7 @@
 .cart-amount-card {
   width: 100%;
   max-width: 425px;
-  height: 275px;
+  height: 320px;
   background-color: #f4f4f4;
   margin-left: 25px;
   margin-top: 25px;
@@ -398,7 +398,8 @@
 
 .cart-price {
   font-size: 20px;
-  margin-left: 50px;
+  margin-left: 340px;
+  position: absolute;
 }
 
 .cart-paymentmethods {
@@ -568,4 +569,11 @@
 .product-page-price-div {
   position: absolute;
   margin-left: 905px;
+}
+
+.cart-amount-subtotal {
+  font-size: 20px;
+  margin-left: 340px;
+  margin-top: 25px;
+  position: absolute;
 }

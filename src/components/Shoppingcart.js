@@ -54,6 +54,27 @@ const Shoppingcart = () => {
         </ul>
     ));
 
+    const sum = filter
+    .map(filteredProduct => filteredProduct[1].productFilter[0].Price)
+    .reduce((accumulator, currentValue) => accumulator + parseFloat(currentValue), 0);
+
+    const shipment = () => {
+       if (sum > 100) {
+           return 0;
+       } else if(sum < 100) {
+           return 5;
+       }
+   }
+
+   const total = () => {
+       if (sum > 100) {
+           return sum;
+       } else if (sum < 100) {
+           return sum + 5;
+       }
+   }
+        
+    
     return (
         <div className="bg">
             <Loggedinnavbar/>
@@ -75,21 +96,31 @@ const Shoppingcart = () => {
 
                                 <div className="row">
                                     <p className="mt-4 cart-amount-paragraph">
-                                        Välisumma
+                                        Välisumma (sis. 24% alv)
                                     </p>
 
-                                    <p>
-
+                                    <p className="cart-amount-subtotal">
+                                        {sum}.00 €
                                     </p>
                                 </div>
 
-                                <div className="row line">
+                                <div className="row">
                                     <p className="mt-2 cart-amount-paragraph">
                                         Toimituskulut
                                     </p>
 
                                     <p className="cart-price mt-2">
-                                        Ilmainen
+                                        {shipment()}.00 €
+                                    </p>
+                                </div>
+
+                                <div className="row line">
+                                    <p className="mt-2 cart-amount-paragraph">
+                                        Kokonaissumma
+                                    </p>
+
+                                    <p className="cart-price mt-2">
+                                        {total()}.00 €
                                     </p>
                                 </div>
 
