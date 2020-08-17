@@ -9,6 +9,7 @@ import MC from "./../icons/mc.png";
 import Paypal from "./../icons/paypal.png";
 import Skrill from "./../icons/skrill.png";
 import Cookies from "universal-cookie";
+import Delete from "./../icons/delete-16.png";
 
 const cookies = new Cookies();
 
@@ -22,28 +23,58 @@ const Shoppingcart = () => {
         setCookieList(toArray);
     }, []);
 
-    let filter = cookieList.filter(name => name[0][0] === "a");
-    console.log(filter)
+    const handleClick = (e) => {
+        cookies.remove(`${filter[0][0]}`);
 
-    const shoppingList = filter.map(filteredMap => (
-        <ul className="list-group shoppingcart-list" key={filteredMap[1].productFilter[0].ProductName}>
+        alert("Tuote poistettu ostoskorista");
+    }
+
+    const filter = cookieList.filter(name => name[0][0] === "a");
+
+    const shoppingList = filter.map(filteredProduct => (
+        <ul className="list-group cart-list" key={filteredProduct[1].productFilter[0].Description}>
             <li className="list-group-item">
-            <div className="row">
-                    <p className="shoppingcart-paragraph">
-                        {filteredMap[1].productFilter[0].ProductName}
+                <div className="row">
+                    <p className="cart-item-name">
+                        {filteredProduct[1].productFilter[0].ProductName}
                     </p>
-                    <p className="shoppingcart-price">
-                        {filteredMap[1].productFilter[0].Price}
+
+                    <p className="cart-item-price">
+                        {filteredProduct[1].productFilter[0].Price+" €"}
                     </p>
+
+                    <button type="button"
+                     className="btn cart-delete"
+                     onClick={handleClick}>
+                            Poista tuote
+                        <img className="delete-icon" src={Delete}></img>
+                    </button>
                 </div>
             </li>
         </ul>
-
     ));
 
-    console.log(filter);
+    const sum = filter
+    .map(filteredProduct => filteredProduct[1].productFilter[0].Price)
+    .reduce((accumulator, currentValue) => accumulator + parseFloat(currentValue), 0);
 
+    const shipment = () => {
+       if (sum > 100) {
+           return 0;
+       } else if(sum < 100) {
+           return 5;
+       }
+   }
 
+   const total = () => {
+       if (sum > 100) {
+           return sum;
+       } else if (sum < 100) {
+           return sum + 5;
+       }
+   }
+        
+    
     return (
         <div className="bg">
             <Loggedinnavbar/>
@@ -55,9 +86,7 @@ const Shoppingcart = () => {
                                     Ostoskori
                                 </h2>
 
-                                <div>
-                                    {shoppingList}
-                                </div>
+                                {shoppingList}
                             </div>
 
                             <div className="cart-amount-card">
@@ -67,21 +96,31 @@ const Shoppingcart = () => {
 
                                 <div className="row">
                                     <p className="mt-4 cart-amount-paragraph">
-                                        Välisumma
+                                        Välisumma (sis. 24% alv)
                                     </p>
 
-                                    <p>
-
+                                    <p className="cart-amount-subtotal">
+                                        {sum}.00 €
                                     </p>
                                 </div>
 
-                                <div className="row line">
+                                <div className="row">
                                     <p className="mt-2 cart-amount-paragraph">
                                         Toimituskulut
                                     </p>
 
                                     <p className="cart-price mt-2">
-                                        Ilmainen
+                                        {shipment()}.00 €
+                                    </p>
+                                </div>
+
+                                <div className="row line">
+                                    <p className="mt-2 cart-amount-paragraph">
+                                        Kokonaissumma
+                                    </p>
+
+                                    <p className="cart-price mt-2">
+                                        {total()}.00 €
                                     </p>
                                 </div>
 
