@@ -367,6 +367,9 @@
   margin-bottom: 25px;
   margin-top: 25px;
   margin-left: 35px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .cart-header {
@@ -535,7 +538,7 @@
   color: #FFFF;
   background-color: #112D32;
   font-size: 15px;
-  margin-left: 510px;
+  margin-left: 460px;
   position: absolute;
 }
 
@@ -553,7 +556,7 @@
 
 .cart-item-price {
   position: absolute;
-  margin-left: 400px;
+  margin-left: 390px;
   font-size: 18px;
   margin-top: 0px;
   margin-bottom: 10px;
