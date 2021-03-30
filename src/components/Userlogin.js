@@ -44,7 +44,8 @@ class Userlogin extends Component {
                 cookies.set("Username", {Username} , { path: "/" });  
                 cookies.set("Password", {Password} , { path: "/" });
                 cookies.set("UserID", {userID} , { path: "/" });
-                alert("Kirjauduttu onnistuneesti sisään!")   
+                this.props.history.push("/");  
+                alert("Kirjauduttu onnistuneesti sisään!"); 
         })
         .catch(error => {
             alert("Kirjautuminen epäonnistui!")
@@ -98,7 +99,7 @@ class Userlogin extends Component {
                             </div>
                                  
                             <button type="submit" className="btn form-button mt-3 mb-3">     
-                                Kirjaudu   
+                                Kirjaudu  
                             </button>    
                         </form>
                         </div>

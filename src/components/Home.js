@@ -23,7 +23,7 @@ const Home = () => {
                      <div className="row">
                         <Menu/>
 
-                     <div>
+                     <div className="home-right">
                         <div id="carouselIndicators" className="carousel slide" data-ride="carousel">
                            <ul className="carousel-indicators">
                               <li data-target="#carouselIndicators" data-slide-to="0" className="active"></li>
@@ -84,7 +84,7 @@ const Home = () => {
                 <div className="row">
                    <Menu/>
 
-                <div>
+                <div className="home-right">
                 <div id="carouselIndicators" className="carousel slide" data-ride="carousel">
                      <ul className="carousel-indicators">
                         <li data-target="#carouselIndicators" data-slide-to="0" className="active"></li>

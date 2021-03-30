@@ -22,10 +22,11 @@ class Userregister extends Component {
         Axios.post("http://localhost:5000/ecommerce/users/1", this.state, {withCredentials: true})
         .then(response => { 
                 console.log(response);
-                alert("Rekisteröinti onnistui, ole hyvä ja kirjaudu sisään!") 
+                this.props.history.push("/login"); 
+                alert("Rekisteröinti onnistui, ole hyvä ja kirjaudu sisään!"); 
         })
         .catch(error => {
-            alert("Rekisteröinti epäonnistui, yritä uudelleen!")
+            alert("Rekisteröinti epäonnistui, yritä uudelleen!");
             console.log(error);
         })
 
