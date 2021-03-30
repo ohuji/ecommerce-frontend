@@ -272,8 +272,10 @@
 }
 
 .category-item {
-  width: 950px;
-  height: 200px;
+  width: 100%;
+  max-width: 950px;
+  height: auto;
+  max-height: 200px;
   margin-bottom: 25px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
@@ -434,11 +436,9 @@
 .category-info-card {
   width: 100%;
   height: auto;
-  max-width: 1200px;
   max-height: 200px;
   background-color: #FFFF;
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2), 0 15px 35px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 8px;
   padding: 25px;
 }
 
@@ -579,4 +579,35 @@
   margin-left: 340px;
   margin-top: 25px;
   position: absolute;
+}
+.products-right {
+  width: 81%;
+  overflow: auto;
+}
+
+.audio-product-list {
+  display: block;
+  margin-left: 20%;
+}
+
+@media all and (min-width: 1000px) and (max-width: 1800px) {
+  .home-right {
+    width: 80%;
+  }
+
+  .menu {
+    width: 20%;
+  }
+
+  .products-right {
+    width: 80%;
+  }
+
+  .category-info-card {
+    max-height: 400px;
+  }
+
+  .audio-product-list {
+    margin-left: 10%;
+  }
 }

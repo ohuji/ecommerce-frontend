@@ -12,7 +12,7 @@ import cart from "./../icons/cart-59-24.png";
 const cookies = new Cookies()
 
 const Audioproduct = () => {
-    const cookieExists = cookies.get("Username") && cookies.get("Password");
+    const cookieExists = cookies.get("username") && cookies.get("password");
 
     let [audioProducts, setAudioProducts] = useState([]);
 
@@ -112,7 +112,12 @@ const Audioproduct = () => {
                             <Menu/>
 
                             <div className="product-page-card">
-                                
+                                {product}
+
+                                <button className="product-page-button btn" onClick={handleClick}>
+                                    Lisää ostoskoriin
+                                    <img src={cart} className="ml-3 mb-1"></img>
+                                </button>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "./../App.css";
 import logout from "./../icons/account-logout-24.png";
 import shoppingCart from "./../icons/cart-59-24.png";
@@ -12,8 +12,8 @@ const cookies = new Cookies()
 class Loggedinnavbar extends Component {
 
     handleClick = (e) => {
-        cookies.remove("Username", { path: "/" });
-        cookies.remove("Password", { path: "/" });
+        cookies.remove("sername", { path: "/" });
+        cookies.remove("assword", { path: "/" });
     }
 
     render() {

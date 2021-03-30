@@ -63,7 +63,7 @@ class Audioproducts extends Component {
          </ul>
         );
 
-        const cookieExists = cookies.get("Username") && cookies.get("Password");
+        const cookieExists = cookies.get("username") && cookies.get("password");
 
         if(!cookieExists) {
             return(
@@ -73,10 +73,10 @@ class Audioproducts extends Component {
                         <div className="row">
                             <Menu/>
 
-                            <div>
-                                <div className="category-info-card mt-5 mb-5 offset-2">
+                            <div className="products-right">
+                                <div className="category-info-card mb-3">
                                     <div className="row">
-                                        <h1 className="offset-4 mr-3 mb-3">
+                                        <h1 className="offset-5 mr-3 mb-3">
                                                 Audio- ja hifi
                                         </h1>
 
@@ -87,7 +87,7 @@ class Audioproducts extends Component {
                                     </p>
                                 </div>
 
-                                <div className="offset-3 mb-4">
+                                <div className="audio-product-list mb-4">
                                     {audioProductList}  
                                 </div>
                             </div>     
@@ -105,13 +105,13 @@ class Audioproducts extends Component {
                         <div className="row">
                             <Menu/>
 
-                            <div>
-                                <div className="category-info-card mt-5 mb-5 offset-2">
+                            <div className="products-right">
+                                <div className="category-info-card mb-3">
                                     <div className="row">
-                                        <h1 className="offset-4 mr-3 mb-3">
+                                        <h1 className="offset-5 mr-3 mb-3">
                                                 Audio- ja hifi
                                         </h1>
-
+                                       
                                         <img src={headphones} className="icon"></img>
                                     </div>
                                     <p className="category-info-paragraph">
@@ -119,7 +119,7 @@ class Audioproducts extends Component {
                                     </p>
                                 </div>
 
-                                <div className="offset-3 mb-4">
+                                <div className="audio-product-list mb-4">
                                     {audioProductList}  
                                 </div>
                             </div>     

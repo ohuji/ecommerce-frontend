@@ -25,8 +25,7 @@ const Shoppingcart = () => {
 
     const handleClick = (e) => {
         cookies.remove(`${filter[0][0]}`);
-
-        alert("Tuote poistettu ostoskorista");
+        window.location.reload();
     }
 
     const filter = cookieList.filter(name => name[0][0] === "a");

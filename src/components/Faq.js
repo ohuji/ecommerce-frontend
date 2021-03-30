@@ -10,7 +10,7 @@ import arrowDown from "./../icons/arrow-204-16.png";
 const cookies = new Cookies();
 
 const Faq = () => {
-    const cookieExists = cookies.get("Username") && cookies.get("Password");
+    const cookieExists = cookies.get("username") && cookies.get("password");
 
     if (cookieExists) {
         return (

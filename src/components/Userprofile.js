@@ -23,7 +23,7 @@ class Userprofile extends Component {
     }
 
     getUser = () => {
-        const userID = cookies.get("UserID");
+        const userID = cookies.get("userid");
         const parsed = JSON.stringify(userID);
         const url = "http://localhost:5000/ecommerce/users/" + parsed;
 
@@ -37,7 +37,7 @@ class Userprofile extends Component {
     }
 
     handleSubmit = () => {
-        const userID = cookies.get("UserID");
+        const userID = cookies.get("userid");
         const url = "http://localhost:5000/ecommerce/users/" + userID;
 
         Axios.put(url, this.state) 

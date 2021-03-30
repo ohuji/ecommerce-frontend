@@ -41,9 +41,9 @@ class Userlogin extends Component {
         Axios.post("http://localhost:5000/ecommerce/users", this.state, {withCredentials: true})
         .then(response => {
                 console.log(response);
-                cookies.set("Username", {Username} , { path: "/" });  
-                cookies.set("Password", {Password} , { path: "/" });
-                cookies.set("UserID", {userID} , { path: "/" });
+                cookies.set("username", {Username} , { path: "/" });  
+                cookies.set("password", {Password} , { path: "/" });
+                cookies.set("userid", {userID} , { path: "/" });
                 this.props.history.push("/");  
                 alert("Kirjauduttu onnistuneesti sisään!"); 
         })
